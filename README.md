@@ -72,6 +72,61 @@ User authentication mechanisms are essential to ensure secure and authorized acc
 Client-server chat applications are versatile tools that facilitate real-time communication between users over a network. They incorporate various components, including server-side and client-side elements, and must consider factors such as security, scalability, and concurrency. As technology continues to advance, client-server chat applications remain integral for collaborative communication in various domains.
 
 Client-server chat applications are foundational to real-time communication over networks. They incorporate principles of socket programming, communication protocols, and security mechanisms to provide a seamless user experience. Understanding the basics of client-server chat applications is essential for developers involved in networked application development, as they form the backbone of various collaborative communication systems. As technology evolves, chat applications continue to adapt, incorporating new features and technologies to enhance user interaction and connectivity.
+##Code
+Client:
+#Developed By:VASHMITHA V
+#Register no:212225240180
+import socket
+s = socket.socket()
+host = input(str('Enter hostname or host IP : ')) port 
+= 8080
+s.connect((host, port)) 
+print('Connected to chat server') 
+while 1:
+incoming_message = s.recv(1024) 
+incoming_message = 
+incoming_message.decode() print(' Server : ',
+incoming_message) print()
+message = input(str('>> ')) 
+message = 
+message.encode() 
+s.send(message) 
+print('Sent')
+print()
+Server:
+#Developed By:VASHMITHA V
+#Register no:212225240180
+import socket
+s = socket.socket()
+host = socket.gethostname()
+print(' Server will start on host : ', 
+host) port = 8080
+s.bind((host, port))
+print()
+print('Waiting for 
+connection') 
+print()
+s.listen(1)
+conn, addr = s.accept()
+print(addr, ' Has connected to the 
+server') print()
+while 1:
+message = 
+input(str('>> ')) 
+message = 
+message.encode(
+) 
+conn.send(messa
+ge) print('Sent')
+print()
+incoming_message = conn.recv(1024) 
+incoming_message = 
+incoming_message.decode() 
+print(' Client : ',
+incoming_message) print()
+##Output:
+<img width="613" height="238" alt="image" src="https://github.com/user-attachments/assets/6bff2575-777a-4468-8055-f3ce33b3e6c5" />
+<img width="670" height="252" alt="image" src="https://github.com/user-attachments/assets/b59caaf2-24a9-49f2-977b-23a0993170eb" />
 
 
 ## Result:
