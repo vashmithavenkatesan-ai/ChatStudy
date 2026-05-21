@@ -125,7 +125,11 @@ incoming_message.decode()
 print(' Client : ',
 incoming_message) print()
 ##Output:
+
+client:
 <img width="613" height="238" alt="image" src="https://github.com/user-attachments/assets/6bff2575-777a-4468-8055-f3ce33b3e6c5" />
+
+server:
 <img width="670" height="252" alt="image" src="https://github.com/user-attachments/assets/b59caaf2-24a9-49f2-977b-23a0993170eb" />
 
 
