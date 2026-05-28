@@ -77,54 +77,31 @@ Client-server chat applications are foundational to real-time communication over
 Client:
 #Developed By:VASHMITHA V
 #Register no:212225240180
-import socket
-s = socket.socket()
-host = input(str('Enter hostname or host IP : ')) port 
-= 8080
-s.connect((host, port)) 
-print('Connected to chat server') 
-while 1:
-incoming_message = s.recv(1024) 
-incoming_message = 
-incoming_message.decode() print(' Server : ',
-incoming_message) print()
-message = input(str('>> ')) 
-message = 
-message.encode() 
-s.send(message) 
-print('Sent')
-print()
-Server:
-#Developed By:VASHMITHA V
-#Register no:212225240180
-import socket
-s = socket.socket()
-host = socket.gethostname()
-print(' Server will start on host : ', 
-host) port = 8080
-s.bind((host, port))
-print()
-print('Waiting for 
-connection') 
-print()
-s.listen(1)
-conn, addr = s.accept()
-print(addr, ' Has connected to the 
-server') print()
-while 1:
-message = 
-input(str('>> ')) 
-message = 
-message.encode(
-) 
-conn.send(messa
-ge) print('Sent')
-print()
-incoming_message = conn.recv(1024) 
-incoming_message = 
-incoming_message.decode() 
-print(' Client : ',
-incoming_message) print()
+#DEVELOPED BY: DHANAVISHNI M
+    #REGISTER NO:  212225040064
+    import socket 
+    from datetime import datetime 
+    s=socket.socket() 
+    s.bind(('localhost',8000)) 
+    s.listen(5) 
+    c,addr=s.accept() 
+    print("Client Address : ",addr) 
+    now = datetime.now() 
+    c.send(now.strftime("%d/%m/%Y %H:%M:%S").encode()) 
+    ack=c.recv(1024).decode() 
+    if ack: 
+         print(ack) 
+         c.close()
+server:
+
+#DEVELOPED BY: DHANAVISHNI M
+     #REGISTER NO:  212225040064
+     import socket 
+     s=socket.socket() 
+     s.connect(('localhost',8000)) 
+     print(s.getsockname()) 
+     print(s.recv(1024).decode()) 
+     s.send("acknowledgement recived from the server".encode())
 ```
 ##Output:
 
