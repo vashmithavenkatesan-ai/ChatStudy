@@ -77,8 +77,7 @@ Client-server chat applications are foundational to real-time communication over
 Client:
 #Developed By:VASHMITHA V
 #Register no:212225240180
-#DEVELOPED BY: DHANAVISHNI M
-    #REGISTER NO:  212225040064
+
     import socket 
     from datetime import datetime 
     s=socket.socket() 
@@ -94,8 +93,7 @@ Client:
          c.close()
 server:
 
-#DEVELOPED BY: DHANAVISHNI M
-     #REGISTER NO:  212225040064
+
      import socket 
      s=socket.socket() 
      s.connect(('localhost',8000)) 
